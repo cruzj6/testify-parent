@@ -28,7 +28,23 @@
     <!-- maven-compiler-plugin -->
     <maven.compiler.target>1.7</maven.compiler.target>
     <maven.compiler.source>1.7</maven.compiler.source>
+
+    <snapshots.repository.url />
+    <releases.repository.url />
+    <snapshots.repository.id />
+    <releases.repository.id />
   </properties>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>testify-snapshots</id>
+      <url>${snapshots.repository.url}</url>
+    </snapshotRepository>
+    <repository>
+      <id>testify-releases</id>
+      <url>${releases.repository.url}</url>
+    </repository>
+  </distributionManagement>
 
   <scm>
     <url>https://github.com/testify/testify-parent.git</url>
