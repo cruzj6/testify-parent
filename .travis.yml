@@ -1,0 +1,16 @@
+before_install: git clone -b travis `git config --get remote.origin.url` target/travis
+install: mvn install --quiet -DskipTests=true -B --settings target/travis/settings.xml""
+script: mvn test --quiet -B --settings target/travis/settings.xml
+after_success: mvn deploy --settings target/travis/settings.xml
+language: java
+jdk:
+- openjdk7
+- oraclejdk7
+- oraclejdk8
+branches:
+  except:
+  - travis
+env:
+  global:
+  - secure: cgpxS1fMfZPSqAnSdfTgqVVWExhWGIBcqI+Wx0JCYqeStUQ1iFMzu2xoWb6M2miHzKFTCwS0QVJqjZyQq/4gLSo2gH3yHEXlmnoaFwINd6Ve6aZ/dO4cBUCiEKnmOPeW9huS02zC4H+LoeacPR7Ms/eUcnDzqPKF82UNEO+ADIk=
+  - secure: JNsvbuIyIdScM8/lsveTmSv3asrUhu/Jk1482VjoHqGa5UKrBk21LMGGpU4ObvId0mqKcDRKiVEHUcLGsIc0EtxDY0egt70aSxBN80Eob+waluqOoi2LDxVgboCsglU2/LqIrlgKF8Lc5mWgefaTFzx8vake0ENBnBw8/mRpBpE=
