@@ -5,8 +5,6 @@ after_success: mvn deploy --settings target/travis/settings.xml
 language: java
 jdk:
 - openjdk7
-- oraclejdk7
-- oraclejdk8
 branches:
   except:
   - travis
