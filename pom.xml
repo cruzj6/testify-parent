@@ -37,8 +37,7 @@
 
     <snapshots.repository.url />
     <releases.repository.url />
-    <snapshots.repository.id />
-    <releases.repository.id />
+    <arguments />
   </properties>
 
   <distributionManagement>
