@@ -5,7 +5,7 @@
 
   <groupId>org.codice.testify</groupId>
   <artifactId>testify-parent</artifactId>
-  <version>0.0.1</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Testify Parent</name>
   <description>Testify Parent pom</description>
@@ -55,7 +55,7 @@
     <url>https://github.com/testify/testify-parent.git</url>
     <connection>scm:git:https://github.com/testify/testify-parent.git</connection>
     <developerConnection>scm:git:https://github.com/testify/testify-parent.git</developerConnection>
-    <tag>testify-parent-0.0.1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <profiles>
